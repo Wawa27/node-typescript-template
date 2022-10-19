@@ -1,0 +1,30 @@
+{
+  "name": "node-typescript-template",
+  "version": "1.0.0",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.3",
+    "@types/expect": "^24.3.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "chai": "^4.3.6",
+    "eslint": "^8.20.0",
+    "husky": "^8.0.1",
+    "mocha": "^10.0.0",
+    "typescript": "^4.8.3",
+    "ts-mocha": "^10.0.0"
+  },
+  "scripts": {
+    "dev": "ts-node -r dotenv/config ./src/main.ts",
+    "build": "tsc",
+    "start": "node -r dotenv/config --experimental-specifier-resolution=node dist/main.js",
+    "test": "ts-mocha -r dotenv/config tests/**/*.spec.ts",
+    "prepare": "husky install",
+    "lint": "eslint --ext .ts src tests --fix"
+  }
+}
