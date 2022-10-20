@@ -14,10 +14,15 @@
     "@typescript-eslint/parser": "^5.31.0",
     "chai": "^4.3.6",
     "eslint": "^8.20.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.1",
     "mocha": "^10.0.0",
-    "typescript": "^4.8.3",
-    "ts-mocha": "^10.0.0"
+    "prettier": "^2.7.1",
+    "prettier-eslint": "^15.0.1",
+    "ts-mocha": "^10.0.0",
+    "typescript": "^4.8.3"
   },
   "scripts": {
     "dev": "ts-node -r dotenv/config ./src/main.ts",
@@ -25,6 +30,6 @@
     "start": "node -r dotenv/config --experimental-specifier-resolution=node dist/main.js",
     "test": "ts-mocha -r dotenv/config tests/**/*.spec.ts",
     "prepare": "husky install",
-    "lint": "eslint --ext .ts src tests --fix"
+    "lint": "eslint --ext .ts src tests"
   }
 }
